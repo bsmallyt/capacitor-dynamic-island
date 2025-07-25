@@ -5,4 +5,8 @@ import Foundation
         print(value)
         return value
     }
+
+    @objc public func greet(_ name: String) -> String {
+        return "Hello, \(name)!"
+    }
 }
