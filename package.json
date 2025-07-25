@@ -1,5 +1,5 @@
 {
-  "name": "capacitor-dynamic-island",
+  "name": "@bennnyt/capacitor-dynamic-island",
   "version": "0.0.1",
   "description": "Allow for ionic ios app to create features for the dynamic island",
   "main": "dist/plugin.cjs.js",

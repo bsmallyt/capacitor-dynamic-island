@@ -7,4 +7,9 @@ export class DynamicIslandWeb extends WebPlugin implements DynamicIslandPlugin {
     console.log('ECHO', options);
     return options;
   }
+  async greet(options: { name?: string }): Promise<{ greeting: string }> {
+    const name = options.name || 'World';
+    console.log('GREET', name);
+    return { greeting: `Hello, ${name}!` };
+  }
 }
