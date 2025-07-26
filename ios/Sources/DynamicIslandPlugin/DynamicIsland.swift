@@ -9,4 +9,15 @@ import Foundation
     @objc public func greet(_ name: String) -> String {
         return "Hello, \(name)!"
     }
+
+    @objc public func alert(_ message: String) {
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        
+        DispatchQueue.main.async {
+            if let viewController = UIApplication.shared.keyWindow?.rootViewController {
+                viewController.present(alert, animated: true, completion: nil)
+            }
+        }
+    }
 }

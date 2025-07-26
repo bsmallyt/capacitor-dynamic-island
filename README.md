@@ -15,6 +15,7 @@ npx cap sync
 
 * [`echo(...)`](#echo)
 * [`greet(...)`](#greet)
+* [`alert(...)`](#alert)
 
 </docgen-index>
 
@@ -47,6 +48,19 @@ greet(options: { name?: string; }) => Promise<{ greeting: string; }>
 | **`options`** | <code>{ name?: string; }</code> |
 
 **Returns:** <code>Promise&lt;{ greeting: string; }&gt;</code>
+
+--------------------
+
+
+### alert(...)
+
+```typescript
+alert(options: { message: string; }) => Promise<void>
+```
+
+| Param         | Type                              |
+| ------------- | --------------------------------- |
+| **`options`** | <code>{ message: string; }</code> |
 
 --------------------
 

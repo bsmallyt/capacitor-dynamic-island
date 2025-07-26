@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="@bennnyt/capacitor-dynamic-island"
+        version="1.0.0">
+
+  <name>Capacitor Dynamic Island</name>
+
+  <platform name="ios">
+    <podspec>
+      <name>CapacitorDynamicIsland</name>
+      <homepage>https://github.com/bennnyt/capacitor-dynamic-island</homepage>
+      <sources>
+        <source url="https://github.com/bennnyt/capacitor-dynamic-island.git" />
+      </sources>
+    </podspec>
+  </platform>
+
+</plugin>

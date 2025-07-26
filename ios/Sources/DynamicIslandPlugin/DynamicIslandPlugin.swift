@@ -1,6 +1,7 @@
 import Foundation
 import Capacitor
 import ActivityKit
+import UIKit
 
 /**
  * Please read the Capacitor iOS Plugin Development Guide
@@ -12,7 +13,8 @@ public class DynamicIslandPlugin: CAPPlugin, CAPBridgedPlugin {
     public let jsName = "DynamicIsland"
     public let pluginMethods: [CAPPluginMethod] = [
         CAPPluginMethod(name: "echo", returnType: CAPPluginReturnPromise),
-        CAPPluginMethod(name: "greet", returnType: CAPPluginReturnPromise)
+        CAPPluginMethod(name: "greet", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "alert", returnType: CAPPluginReturnPromise)
     ]
     private let implementation = DynamicIsland()
 
@@ -28,5 +30,11 @@ public class DynamicIslandPlugin: CAPPlugin, CAPBridgedPlugin {
         call.resolve([
             "greeting": implementation.greet(name)
         ])
+    }
+
+    @objc func alert(_ call: CAPPluginCall) {
+        let message = call.getString("message") ?? "Hello, World!"
+        implementation.alert(message)
+        call.resolve()
     }
 }

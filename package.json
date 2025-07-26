@@ -1,6 +1,6 @@
 {
   "name": "@bennnyt/capacitor-dynamic-island",
-  "version": "0.0.2",
+  "version": "0.0.16",
   "description": "Allow for ionic ios app to create features for the dynamic island",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -71,6 +71,7 @@
   },
   "capacitor": {
     "ios": {
+      "podname": "CapacitorDynamicIsland",
       "src": "ios"
     },
     "android": {
